@@ -27,3 +27,7 @@ Route::post('/api/v1/markCompleteRoute/{id}', [ToDoListController::class, 'markC
 Route::post('/api/v1/deleteItemRoute/{id}', [ToDoListController::class, 'deleteItem'])->name('deleteItem');
 
 Route::post('/api/v1/updateItemRoute/', [ToDoListController::class, 'updateItem'])->name('updateItem');
+
+Route::get('/other', function(){
+    return view('welcome');
+});
