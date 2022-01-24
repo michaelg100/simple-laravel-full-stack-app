@@ -1,4 +1,4 @@
-Start new project:
+#Start new project:
 
 curl -s "https://laravel.build/example-app" | bash
 
@@ -7,11 +7,11 @@ cd example-app
 ./vendor/bin/sail up
 
 
-Make model:
+#Make model:
 
 ./vendor/bin/sail artisan --version
 
-Update model:
+#Update model:
 
 
 Schema::create('list_items', function (Blueprint $table) {
@@ -21,15 +21,15 @@ Schema::create('list_items', function (Blueprint $table) {
             $table->timestamps();
         });
 
-Migrate:
+#Migrate:
 
  ./vendor/bin/sail artisan migrate
 
-Controller:
+#Controller:
 
 ./vendor/bin/sail artisan make:controller ToDoListController
 
-Logging in Controller:
+#Logging in Controller:
 
 public function saveItem(Request $request){
         \Log::info(json_encode($request->all()));
